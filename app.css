@@ -1,0 +1,93 @@
+html,body {font-family:'Open Sans', 'Arial';min-width:960px;height:100%;font-size:16px;line-height:24px;background:#f0f0f0;}
+#container {height:100%;}
+.container {padding:85px 0 25px;}
+
+.wrapper {max-width:960px;margin:0 auto;}
+.icon {background:center no-repeat;display:inline-block;}
+/*.stickyContainer {position:relative;}
+.sticky {position:absolute;}*/
+
+.content, body.wp-autoresize {background:#fff;width:640px;min-height:300px;padding:30px 30px 10px !important;margin-bottom:25px;}
+.content h1, .content h2 {padding-bottom:20px;}
+.content p, .content ul {padding-bottom:15px;}
+.content a {color:#33f;text-decoration:underline;}
+.content h1, .content h2 {font-weight:600;color:#222;}
+.content h1 {font-size:24px;line-height:27px;}
+.content h2 {font-size:20px;line-height:24px;}
+.content ul li {list-style:disc inside;}
+
+
+header {z-index:10;position:fixed;top:0;left:0;width:100%;height:60px;background:#fafafa;}
+header .wrapper {background:#fff;}
+header .logo {position:relative;z-index:2;float:left;height:40px;margin:10px 0 0 15px;line-height:40px;color:#333;font-weight:600;font-size:20px;}
+header .logo .image {width:40px;height:40px;float:left;margin-right:10px;background:url(uploads/logo.png) center no-repeat;background-size:cover;}
+header .menu {position:absolute;z-index:1;top:0;left:0;right:0;margin:0 auto;width:100%;text-align:center; line-height:0;font-size:0;}
+header .menu li {display:inline-block;}
+header .menu li a {display:inline-block;line-height:60px;font-size:18px;padding-left:30px;color:#333;}
+header .menu li a:hover {text-decoration:underline;}
+header .menu li .current {color:#000;text-decoration:underline;}
+header .right {line-height:60px;position:relative;z-index:2;}
+header .right a {color:#000;}
+header .right .icon {width:32px;height:27px;margin:0 15px 0 10px;vertical-align:middle;margin-top:-6px;}
+
+
+.home .slider_block {background:#fff;height:345px;margin-bottom:25px}
+.home .logo_block {padding:30px;}
+.home .logo_block strong {display:block;font-weight:600;font-size:28px;line-height:28px;padding-top:15px;}
+.home .slider {float:right;height:100%;width:650px;}
+.home .content {width:100%;font-size:13px;margin-top:10px;}
+
+.slider {position:relative;}
+.slider .slide {display:none;}
+.slider .front, .slider .back {position:absolute;top:0;left:0;z-index:1;width:100%;height:100%;background:center no-repeat;background-size:cover;}
+.slider .front {z-index:2;display:none;}
+.slider .text {position:absolute;width:100%;bottom:0;left:0;background:rgba(0,0,0,0.7);color:#fff;padding:15px 20px;font-size:18px;}
+
+
+.works {font-size:0;line-height:0}
+.works .post {display:inline-block;position:relative;font-size:13px;line-height:17px;margin:0 30px 30px 0;width:300px;height:300px;background:#fff;
+	border: 1px solid #d8d8d8;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border-bottom-width: 2px;
+}
+.works .nth:nth-child(3n) {margin-right:0;}
+.works .post .image {width:100%;height:168px;background:center no-repeat;background-size:cover;}
+.works .post .desc {padding:10px 20px;height:110px;overflow:hidden;}
+.works .post .title {position:absolute;bottom:0;left:20px;height:30px;font-size:18px;width:100%;font-weight:600;color:#333;}
+.works .post .icon {position:absolute;bottom:10px;right:10px;width:20px;height:20px;}
+
+
+.sidebar {position:fixed;background:#fff;left:50%;margin-left:180px;top:85px;width:300px;height:300px;padding:15px 20px;}
+.home .sidebar,.works .sidebar {position:static;float:right;margin-left:0;}
+.sidebar .title {text-align:center;font-size:24px;line-height:26px;color:#333;display:block;padding-bottom:10px;}
+.sidebar .email, .sidebar .message {width:250px;padding:5px;margin-bottom:10px;}
+.sidebar .email {font-size:16px;line-height:20px;}
+.sidebar .message {height:140px;font-size:14px;line-height:17px;}
+.sidebar .submit {float:right;width:50%;}
+
+.services_block {float:left;width:660px;}
+.services_block .title {background:#fff;margin:0 20px 20px 0;padding:17px 5px;text-align:center;}
+.services_block .title a {color:#000;font-size:18px;font-weight:bold;}
+.services_block table {width:100%;}
+.services_block td {padding:0 20px 20px 0;}
+.services_block table a {display:block;font-weight:600;background:#fdfdfd;height:140px;line-height:140px;text-align:center;color:#333;}
+.services_block a:hover {background:#fff;text-decoration:underline;}
+
+
+.scrollSlider .slide {height:100%;overflow:hidden;}
+.mobilnyy-sayt {height:100%;}
+.mobilnyy-sayt .slide {position:relative;}
+.mobilnyy-sayt .slide1 {background:#07C2C9;}
+.mobilnyy-sayt .slide2 {background:#F5AE16;}
+.mobilnyy-sayt .slide3 {background:#2AB45F;}
+.mobilnyy-sayt .slide4 {background:#FF490A;}
+.mobilnyy-sayt .slide5 {background:#17A6D2;}
+.mobilnyy-sayt .wrapper {min-width:0;position:absolute;width:970px;height:600px;top:0;left:0;right:0;bottom:0;margin:auto;}
+.mobilnyy-sayt .nextprev {z-index:10;position:fixed;left:50%;margin-left:500px;bottom:10px;width:40px;height:80px;}
+.mobilnyy-sayt .nextprev .next, .mobilnyy-sayt .nextprev .prev {position:relative;fill:#eee;display:block;width:40px;margin-bottom:10px;height:30px;overflow:hidden;}
+.mobilnyy-sayt .nextprev .next svg, .mobilnyy-sayt .nextprev .prev svg {position:absolute;width:48px;height:48px;left:50%;top:50%;margin:-24px 0 0 -24px;}
+.mobilnyy-sayt .nextprev .next:hover, .mobilnyy-sayt .nextprev .prev:hover {fill:#fff;}
+
+.icon.email {background-image: url(data:image/png;base64,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);}
+.icon.blank {background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAyklEQVQ4T6WT7Q3CIBCG5WMAN9ARHIEAA3SEOpndwAUA2cA4ghu4AMG7GhrEKhD5RWie567HC9n8uUjOa61jj88YQz4EeNgiwWKLQCk1WWvHdNgtSGAukFKOlNJTKUsdvnWwJkBwTdIlEEJsGWNXQsg+ddIsQJhzfgHwEGO8g2SHkiZBAd9CCALmMeBMmgRwKwNUPEPlGfbeP9JMnHMT7qtDRAnAwL7gclUFtSx8FdTA/PuSxJ4ElgXm3Pc8Ihgsxv6YRE0P59dvPQFH/sQRKp3YdAAAAABJRU5ErkJggg==);}
