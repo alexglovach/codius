@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Работы - Codius</title>
 
-	<link rel="shortcut icon" href="uploads/logo.png" />
+	<link rel="shortcut icon" href="images/logo.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.18.0/css/uikit.almost-flat.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin,cyrillic">
     <link rel="stylesheet" href="app.css">
@@ -21,109 +21,77 @@
 	</script>
 </head>
 <body>
-	<section id="container"><header>
-	<nav class="wrapper">
-		<div class="right">
-			<a href="tel:+380631544353">+380631544353</a>
-			<a href="mailto:info@codius.com.ua" class="icon email"></a>
-		</div>
-		<a class="logo" href="/"><i class="image"></i>Codius</a>
-		<ul class="menu wrapper">
-			<li><a href="/" class="">Главная</a></li>
-			<li><a href="/services" class="">Услуги</a></li>
-			<li><a href="/works" class="current">Работы</a></li>
-			<li><a href="/contacts" class="">Контакты</a></li>
-		</ul>
-	</nav>
-</header>
-<section class="wrapper container works">
 
+<section id="container">
+	<header>
+		<nav class="wrapper">
+			<div class="right">
+				<a href="tel:+380631544353">+380631544353</a>
+				<a href="mailto:info@codius.com.ua" class="icon email"></a>
+			</div>
+			<a class="logo" href="#/"><i class="image"></i>Codius</a>
+			<ul class="menu wrapper">
+				<li><a href="#/">Главная</a></li>
+				<li><a href="#/services">Услуги</a></li>
+				<li><a href="#/works">Работы</a></li>
+				<li><a href="#/contacts">Контакты</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section id="content" class="wrapper"></section>
+	<div class="clearfix"></div>
+</section>
+
+
+<script id="template-works" class="template" type="text/html">
+	<article class="works">
+		<div class="image" style="background-image:url(<%= thumbnail %>)"></div>
+		<div class="desc"><%= description %></div>
+		<strong class="title"><%= title %></strong>
+		<a class="link icon blank" href="<%= link %>" target="_blank"></a>
+	</article>
+</script>
+
+<script id="template-default" class="template" type="text/html">
+	<%= templates.sidebar() %>
+	<article class="page">
+		<%= description %>
+	</article>
+</script>
+
+<script id="template-services" class="template" type="text/html">
+	<%= templates.sidebar() %>
+	<section class="services_block">
+		<h2 class="title">Услуги создания и разработки сайтов</h2>
+		<% for (var s in services) { %>
+			<a href="#/services/<%= services[s].name %>"><%= services[s].title %></a>
+		<% } %>
+	</section>
+	<div class="clearfix"></div>
+	<article class="page">
+		<%= description %>
+	</article>
+</script>
+
+
+<script id="template-sidebar" class="template" type="text/html">
 	<section class="sidebar nth sticky">
-	<form action="/sendmail" method="post">
-		<strong class="title">Свяжитесь с нами</strong>
-		<input class="email" type="text" name="phonemail" placeholder="Ваш email или телефон" />
-		<textarea class="message" name="message" placeholder="Опишите проект и задайте интересующий вопрос"></textarea>
-		<input class="submit" type="submit" value="Отправить">
-	</form>
-</section>
-
-<article class="post nth">
-			<div class="image" style="background-image:url(https://codius.com.ua/uploads/2014/10/Натяжные-потолки-VOXAN-300x167.png)"></div>
-			<div class="desc"><p>Компанию по установке натяжных потолков от производителя.</p>
-<p>Каталог товаров, цены, акции, отзывы о работах.</p></div>
-			<strong class="title">Натяжные потолки Voxan</strong>
-			<a class="link icon blank" href="http://voxan.kiev.ua" target="_blank"></a>
-		</article>
-			<article class="post nth">
-			<div class="image" style="background-image:url(https://codius.com.ua/uploads/2014/10/PLATЬE-СЧАСТЬЕ-В-ПЛАТЬЕ--300x167.png)"></div>
-			<div class="desc"><p>Сайт компании, предоставляющей платья напрокат для фотосессий, встреч, приемов, событий.</p>
-<p>Каталог товаров, отзывы клиентов, помощь стилиста.</p></div>
-			<strong class="title">Платье шоурум</strong>
-			<a class="link icon blank" href="http://platieshowroom.com/" target="_blank"></a>
-		</article>
-			<article class="post nth">
-			<div class="image" style="background-image:url(https://codius.com.ua/uploads/2014/10/Hair-House-Home-300x167.png)"></div>
-			<div class="desc"><p>Сайт салона красоты.</p>
-<p>Перечень услуг, портфолио работ, коллектив стилистов.</p></div>
-			<strong class="title">Hair House</strong>
-			<a class="link icon blank" href="http://hairhouse.com.ua" target="_blank"></a>
-		</article>
-			<article class="post nth">
-			<div class="image" style="background-image:url(https://codius.com.ua/uploads/2014/10/Магазин-TSYPASHOP-300x148.png)"></div>
-			<div class="desc"><p>Сайт по продаже креативных деревянных игрушек.</p>
-<p>Каталог товаров, оплата и доставка.</p></div>
-			<strong class="title">Tsypashop</strong>
-			<a class="link icon blank" href="http://tsypashop.com.ua" target="_blank"></a>
-		</article>
-			<article class="post nth">
-			<div class="image" style="background-image:url(https://codius.com.ua/uploads/2014/10/big5-300x147.jpg)"></div>
-			<div class="desc"><p>Сайт продакшн студии. </p>
-<p>Галерея работ и перечень услуг.</p></div>
-			<strong class="title">DNA Video</strong>
-			<a class="link icon blank" href="http://dnavideo.com.ua" target="_blank"></a>
-		</article>
-			<article class="post nth">
-			<div class="image" style="background-image:url(https://codius.com.ua/uploads/2014/10/big3-300x154.jpg)"></div>
-			<div class="desc"><p>Сайт компании по производства макаронных изделий и теста.</p>
-<p>Визитные страницы с информацией о продукте и точками продаж.</p>
-<p>&nbsp;</p></div>
-			<strong class="title">Kulinarium Meister</strong>
-			<a class="link icon blank" href="http://kulinarium-meister.com/" target="_blank"></a>
-		</article>
-			<article class="post nth">
-			<div class="image" style="background-image:url(https://codius.com.ua/uploads/2014/10/big2-300x170.jpg)"></div>
-			<div class="desc"><p>Сайт компании по произовдству пакетов.</p>
-<p>Визитные страницы, каталог товаров, расчет заказа.</p></div>
-			<strong class="title">Packetina</strong>
-			<a class="link icon blank" href="http://packetina.com.ua" target="_blank"></a>
-		</article>
-			<article class="post nth">
-			<div class="image" style="background-image:url(https://codius.com.ua/uploads/2014/10/big1-300x168.jpg)"></div>
-			<div class="desc"><p>Сайт модного дизайнера.</p>
-<p>Галерея работ, перечень услуг, запись на консультацию.</p></div>
-			<strong class="title">Sonya Monina</strong>
-			<a class="link icon blank" href="http://sonyamonina.com.ua" target="_blank"></a>
-		</article>
-			<article class="post nth">
-			<div class="image" style="background-image:url(https://codius.com.ua/uploads/2014/10/dina-300x168.png)"></div>
-			<div class="desc"><p>Сайт стоматологической клиники. Визитные страницы, перечень услуг, и запись на прием.</p></div>
-			<strong class="title">Dina</strong>
-			<a class="link icon blank" href="http://dina.crimea.ua" target="_blank"></a>
-		</article>
-		<div class="clearfix"></div>
-	
-</section>
-</section>
+		<form action="/sendmail" method="post">
+			<strong class="title">Свяжитесь с нами</strong>
+			<input class="email" type="text" name="phonemail" placeholder="Ваш email или телефон" />
+			<textarea class="message" name="message" placeholder="Опишите проект и задайте интересующий вопрос"></textarea>
+			<input class="submit" type="submit" value="Отправить">
+		</form>
+	</section>
+</script>
 
 
-
-    <script src="app.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.4/zepto.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.18.0/js/uikit.min.js"></script>
-
-		
+<script src="app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.4/zepto.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.18.0/js/uikit.min.js"></script> -->
 
 </body>
 </html>
